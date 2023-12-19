@@ -576,14 +576,21 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 .modal-window {
     width: 408px;
+    min-height: 584px;
     border-radius: 4px;
     background-color: #FCFCFC;
-    margin: 0 auto;
-    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    position: absolute;
     padding: 72px 24px 24px 24px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.span-icon-close {
+.button-icon-close {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -595,18 +602,25 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     border-radius: 50%;
     background-color: #E7E9FC;
     border: 1px solid rgba(0, 0, 0, 0.10) ;
-    
+    padding: 0;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-close {
     fill: #2E2F42;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.span-icon-close:active {
+.span-icon-close:hover,
+.span-icon-close:focus {
     background-color: #404BBF;
+    border: none;
 }
 
-.span-icon-close:active > .icon-close{
+.span-icon-close:hover > .icon-close,
+.span-icon-close:focus >.icon-close {
     fill: #FFFFFF;
 }
 
