@@ -515,19 +515,17 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     border-radius: 4px;
     border: 1px solid #FFF;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-    background-color: #2E2F42;
-    color: #FFF;
-}
-
-.email-input-footer::placeholder {
+    background-color: transparent;
     color: #FFF;
     font-size: 12px;
     font-weight: 400;
     line-height: 2;
     letter-spacing: 0.04em;
     padding-left: 16px;
-    padding-top: 8px;
-    padding-bottom: 8px;
+}
+
+.email-input-footer::placeholder {
+    color: #FFF;
 }
 
 
@@ -537,22 +535,25 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     text-align: center;
     font-size: 16px;
     font-weight: 500;
-    line-height: 2;
+    line-height: 1.5;
     letter-spacing: 0.04em;
     cursor: pointer;
-    width: 165px;
+    min-width: 165px;
     height: 40px;
     padding: 8px 24px;
 
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    gap: 16px;
     border-radius: 4px;
     border: none;
     transition-property: background-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.svg-footer-button {
+    margin-left: 16px;
 }
 
 .footer-button:hover,
