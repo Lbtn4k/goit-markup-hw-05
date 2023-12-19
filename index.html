@@ -533,26 +533,32 @@
             </div>
           </div>
 
-          <label class="label" for="comment">Comment</label>
-          <textarea
-            class="textarea"
-            name="comment"
-            id="comment"
-            placeholder="Text input"
-          ></textarea>
+          <div class="div-textarea">
+            <label class="label" for="user-comment">Comment</label>
+            <textarea
+              class="textarea"
+              name="user-comment"
+              id="user-comment"
+              placeholder="Text input"
+            ></textarea>
+          </div>
 
           <div class="div-checkbox">
-            <label class="checkbox-label" for="consent">
               <input
-                class="checkbox-input visually-hidden"
+                class="checkbox-input"
                 type="checkbox"
-                name="consent"
-                id="consent"
-                value="consent"
+                name="user-privacy"
+                id="user-privacy"
+                value="true"
               />
-              <span class="box-checkbox"></span>
+              <label class="checkbox-label" for="user-privacy"></label>
+              <span class="box-checkbox">
+                <svg class="icon-vector" width="10" height="8">
+                  <use href="./images/icons.svg#icon-vector"></use>
+                </svg>
+              </span>
               I accept the terms and conditions of the
-              <span class="checkbox-span"> Privacy Policy </span>
+              <a class="checkbox-link" href=""> Privacy Policy </a>
             </label>
           </div>
           <button class="form-button" type="submit">Send</button>
